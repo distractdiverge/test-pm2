@@ -1,0 +1,13 @@
+{
+    "apps": [{
+        "name": "api",
+        "script": "./index.js",
+        "watch": true,
+        "env": {
+            "TEST_ENV_VAR": "Some Variable or something"
+        },
+        "ignore_watch": [
+            "node_modules"
+        ]
+    }]
+}

@@ -7,6 +7,8 @@ app.get('/', (req, res) => {
   res.json({message: 'Hello World!'});
 });
 
+//app.get('/test', (req, res) => { res.json({test: 123})});
+
 app.get('/environment', (req, res) => {
     res.json(process.env);
 });
