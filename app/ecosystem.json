@@ -2,7 +2,7 @@
     "apps": [
         {
             "name": "API",
-            "script": "app.js",
+            "script": "./app/app.js",
             "env": {
                 "COMMON_VARIABLE": "true"
             }
@@ -16,7 +16,7 @@
             "ref": "origin/master",
             "repo": "https://github.com/alexlapinski/test-pm2.git",
             "path": "/app2",
-            "post-deploy": "npm install && pm2 reload ecosystem.json --env dev",
+            "post-deploy": "cd app && npm install && pm2 reload ecosystem.json --env dev",
             "env": {
                 "NODE_ENV": "dev"
             }
