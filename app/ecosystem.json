@@ -1,0 +1,25 @@
+{
+    "apps": [
+        {
+            "name": "API",
+            "script": "app.js",
+            "env": {
+                "COMMON_VARIABLE": "true"
+            }
+        }
+    ],
+
+    "deploy": {
+        "dev": {
+            "user": "node",
+            "host": "192.168.1.104",
+            "ref": "origin/master",
+            "repo": "https://github.com/alexlapinski/test-pm2.git",
+            "path": "/app2",
+            "post-deploy": "npm install && pm2 reload ecosystem.config.js --env dev",
+            "env": {
+                "NODE_ENV": "dev"
+            }
+        }
+    }
+}
