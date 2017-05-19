@@ -16,7 +16,7 @@
             "ref": "origin/master",
             "repo": "https://github.com/alexlapinski/test-pm2.git",
             "path": "/app2",
-            "post-deploy": "npm install && pm2 reload ecosystem.config.js --env dev",
+            "post-deploy": "npm install && pm2 reload ecosystem.json --env dev",
             "env": {
                 "NODE_ENV": "dev"
             }
